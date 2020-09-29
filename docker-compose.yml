@@ -1,21 +1,18 @@
 version: '3'
 services:
-  node-client:
-    build:
-      context: ./client
-      dockerfile: Dockerfile
+  client:
+    image: edisga.azurecr.io/client:01
+    ports:
+       - "3000:3000"
+       - "2222:2222"
+    depends_on:
+       - server
     environment:
-      - server_url=http://node-server:3001
+       - server_url=http://server:3001
+
+  server:
+    image: edisga.azurecr.io/server:01
     ports:
-      - '3000:3000'
-      - '2222:2222'
-    container_name: node-client
-  node-server:
-    build:
-      context: ./server
-      dockerfile: Dockerfile
-    ports:
-      - '3001:3001'
+      - "3001:3001"
     volumes:
-      - /tmp:/data
-    container_name: node-server
+      - media:/data
