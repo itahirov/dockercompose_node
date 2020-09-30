@@ -1,6 +1,6 @@
 variables:
   azureContainerRegistry: istahiacr.azurecr.io
-  azureSubscriptionEndpoint: Pattys CSS App Service CSG Subscription
+  azureSubscriptionEndpoint: 3f1d8a91-940f-4c9d-b8d7-b146893bbd27
 steps:
 - task: DockerCompose@0
   displayName: Container registry login
