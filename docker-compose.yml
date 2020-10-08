@@ -1,7 +1,7 @@
 version: '3'
 services:
   client:
-    image: edisga.azurecr.io/client:01
+    image: istahiacr.azurecr.io/client:01
     ports:
        - "3000:3000"
        - "2222:2222"
@@ -11,7 +11,7 @@ services:
        - server_url=http://server:3001
 
   server:
-    image: edisga.azurecr.io/server:01
+    image: istahiacr.azurecr.io/server:01
     ports:
       - "3001:3001"
     volumes:
