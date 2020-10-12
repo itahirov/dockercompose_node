@@ -1,3 +1,4 @@
+steps:
 - task: AzureAppServiceSettings@1
   inputs:
     azureSubscription: 'Pattys CSS App Service CSG Subscription(1)(3f1d8a91-940f-4c9d-b8d7-b146893bbd27)'
