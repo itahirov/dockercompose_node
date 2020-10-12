@@ -38,4 +38,4 @@ steps:
     azureSubscription: 'Pattys CSS App Service CSG Subscription(1)(3f1d8a91-940f-4c9d-b8d7-b146893bbd27)'
     azureContainerRegistry: '{"loginServer":"istahiacr.azurecr.io", "id" : "/subscriptions/3f1d8a91-940f-4c9d-b8d7-b146893bbd27/resourceGroups/istahidrp7RG/providers/Microsoft.ContainerRegistry/registries/istahiacr"}'
     dockerComposeFile: '**/docker-compose.yml'
-    action: 'Run a Docker Compose command'
+    action: Build services
