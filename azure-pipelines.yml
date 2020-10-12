@@ -4,6 +4,34 @@ steps:
     azureSubscription: 'Pattys CSS App Service CSG Subscription(1)(3f1d8a91-940f-4c9d-b8d7-b146893bbd27)'
     appName: 'istahi-multicontainer'
     resourceGroupName: 'istahiContainersBootcamp'
+    appSettings: |
+      [
+        {
+          "name": "DOCKER_ENABLE_CI",
+          "value": "true",
+          "slotSetting": false
+        },
+        {
+          "name": "DOCKER_REGISTRY_SERVER_PASSWORD",
+          "value": "oghFBC2Z9DPUrEmtGTikJ=eHeaYohv5o",
+          "slotSetting": false
+        },
+        {
+          "name": "DOCKER_REGISTRY_SERVER_URL",
+          "value": "https://istahiacr.azurecr.io",
+          "slotSetting": false
+        },
+        {
+          "name": "DOCKER_REGISTRY_SERVER_USERNAME",
+          "value": "istahiacr",
+          "slotSetting": false
+        },
+        {
+          "name": "WEBSITES_ENABLE_APP_SERVICE_STORAGE",
+          "value": "false",
+          "slotSetting": false
+        }
+      ]
 - task: DockerCompose@0
   inputs:
     containerregistrytype: 'Azure Container Registry'
