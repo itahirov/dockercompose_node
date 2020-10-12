@@ -14,5 +14,5 @@ services:
     image: istahiacr.azurecr.io/server:01
     ports:
       - "3001:3001"
-    volumes:
+    #volumes:
       #- media:/data
